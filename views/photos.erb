@@ -95,7 +95,7 @@
 
   <header>
     <h1><a href="/"><img src="/namba.png"></a></h1>
-    <p><% unless @main %><a href="http://namba.kg/#!/photo/album/<%= @photos['param']['id'] %>/"><%= @photos['param']['album']['title'] %></a><% else %>Лучшие фотоальбомы пользователей <a href="http://namba.kg">namba.kg</a><% end %></p>
+    <p>Все фотографии с КИТ форума 2015 тут!</p>
   </header>
   <div id="main" role="main">
     <ul id="tiles">
@@ -164,7 +164,7 @@
     if (closeToBottom && page && !$("#progress-bar").is(':visible')) {
       var items = $('#tiles li');
 
-      $.getJSON('<% unless @main %>/album/<%= @id %><% end %>/' + page, function(data) {
+      $.getJSON('/album/190021/' + page, function(data) {
         var items = [];
         if (data == null) {
           page = null;

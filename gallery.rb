@@ -15,8 +15,8 @@ get '/:page' do |page|
 end
 
 get '/' do
-  @main = true
-  @photos = JSON.parse(open("http://namba.kg/api/?service=photo&action=category_albums&category=super&page=1&sort=desc").read)
+  @main = false
+  @photos = JSON.parse(open("http://namba.kg/api/?service=photo&action=elements_list&type=album&limit=25&param=190021").read)
   erb :photos
 end
 
