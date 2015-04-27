@@ -6,6 +6,7 @@ require "open-uri"
 
 set :environment, :production
 set :server, %w[thin]
+set :port, 6666
 
 get '/:page' do |page|
   content_type :json
